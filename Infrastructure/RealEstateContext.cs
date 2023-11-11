@@ -10,7 +10,7 @@ namespace Infrastructure
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=RealEstate;User Id=postgres;Password=admin;");
+            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=RealEstate;User Id=postgres;Password=Monster02@;");
 
         }
 

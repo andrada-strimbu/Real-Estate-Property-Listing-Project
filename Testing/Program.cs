@@ -5,7 +5,7 @@ using Real_estate.Domain.Entities;
 using static Real_estate.Domain.Enums.Enums;
 
 Console.WriteLine("Hello, World!");
-var category = User.Create("Dorinel", "DorinMunteanu@dasada.com", "EuSuntDorin123", Role.Customer);
+var category = User.Create("Sorin", "SorinMunteanu@dasada.com", "EuSuntSorin123", Role.Customer);
 
 var context = new RealEstateContext();
 var userRepository = new UseryRepository(context);
