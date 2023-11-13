@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repositories
 {
-    public class UserRepository : BaseRepository<User>
+    public class ListingRepository : BaseRepository<Listing>
     {
-        public UserRepository(RealEstateContext context) : base(context)
+        public ListingRepository(RealEstateContext context) : base(context)
         {
 
         }

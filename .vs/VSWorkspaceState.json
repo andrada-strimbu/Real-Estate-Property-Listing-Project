@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Infrastructure",
+    "\\Infrastructure\\Implementation",
+    "\\Infrastructure\\Repositories",
+    "\\Real_estate.Application",
+    "\\Real_estate.Domain",
+    "\\Real_estate.Domain\\Entities"
+  ],
+  "SelectedNode": "\\Real_estate.Domain\\Entities\\User.cs",
+  "PreviewInSolutionExplorer": false
+}
