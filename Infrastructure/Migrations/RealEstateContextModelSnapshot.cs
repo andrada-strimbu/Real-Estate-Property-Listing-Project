@@ -43,7 +43,6 @@ namespace Infrastructure.Migrations
                         .HasColumnType("text");
 
                     b.Property<List<string>>("ImagesUrls")
-                        .IsRequired()
                         .HasColumnType("text[]");
 
                     b.Property<string>("ImagesUrlsSerialized")

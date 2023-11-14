@@ -3,7 +3,6 @@ using static Real_estate.Domain.Enums.Enums;
 
 namespace Real_estate.Domain.Entities
 {
-
     public class Property : AuditableEntity
     {
         private Property(string title, string address, int size, int price, Status propertyStatus, Guid ownerId, int numberOfBedrooms)
@@ -16,54 +15,60 @@ namespace Real_estate.Domain.Entities
             PropertyStatus = propertyStatus;
             OwnerId = ownerId;
             NumberOfBedrooms = numberOfBedrooms;
-            ImagesUrls = new List<string>(); // Add this line
+            ImagesUrls = new List<string>();
         }
-        public Guid PropertyId { get; private set; } //
-        public string Title { get; private set; }//
+        private Property(string title)
+        {
+            PropertyId = Guid.NewGuid();
+            Title = title;
+        }
+
+        public Guid PropertyId { get; private set; } 
+        public string Title { get; private set; }
         public string? Description { get; private set; }
-        public string Address { get; private set; } //
-        public int Size { get; private set; } //
-        public int Price { get; private set; } //
-        public int NumberOfBedrooms { get; private set; } //
-        public int NumberOfBathrooms { get; private set; }
-        public List<string> ImagesUrls { get; private set; } //
+        public string Address { get; private set; } = default!; 
+        public int Size { get; private set; }  
+        public int Price { get; private set; } = default!;
+        public int NumberOfBedrooms { get; private set; } = default!;
+        public int NumberOfBathrooms { get; private set; } = default!;
+        public List<string>? ImagesUrls { get; private set; } 
 
         public Status PropertyStatus { get; private set; } //
         public Guid OwnerId { get; private set; } //
 
-        public static Result<Property> Create( string title, string address, int size, int price, Status propertyStatus, Guid ownerId, int numberOfBedrooms)
+        public static Result<Property> Create(string title)
         {
             if (string.IsNullOrWhiteSpace(title))
             {
                 return Result<Property>.Failure("Property Name is required.");
             }
-            if (string.IsNullOrWhiteSpace(address))
-            {
-                return Result<Property>.Failure("Address is required.");
-            }
-            if (size <= 0)
-            {
-                return Result<Property>.Failure("Size must be greater than 0");
-            }
-            if (price <= 0)
-            {
-                return Result<Property>.Failure("Price must be greater than zero.");
-            }
-            if (propertyStatus != Status.ForSale && propertyStatus != Status.ForRent && propertyStatus != Status.SoldOrRented)
-            {
-                return Result<Property>.Failure("Must enter a valid status :  ForSale / ForRent / SoldOrRented ");
-            }
-            if (ownerId == default)
-            {
-                return Result<Property>.Failure("Owner Id should not be Guid.Empty(Default).");
-            }
-            if (numberOfBedrooms < 0)
-            {
-                return Result<Property>.Failure("Must enter a valid number of Bedrooms");
+            //if (string.IsNullOrWhiteSpace(address))
+            //{
+            //    return Result<Property>.Failure("Address is required.");
+            //}
+            //if (size <= 0)
+            //{
+            //    return Result<Property>.Failure("Size must be greater than 0");
+            //}
+            //if (price <= 0)
+            //{
+            //    return Result<Property>.Failure("Price must be greater than zero.");
+            //}
+            //if (propertyStatus != Status.ForSale && propertyStatus != Status.ForRent && propertyStatus != Status.SoldOrRented)
+            //{
+            //    return Result<Property>.Failure("Must enter a valid status :  ForSale / ForRent / SoldOrRented ");
+            //}
+            //if (ownerId == default)
+            //{
+            //    return Result<Property>.Failure("Owner Id should not be Guid.Empty(Default).");
+            //}
+            //if (numberOfBedrooms < 0)
+            //{
+            //    return Result<Property>.Failure("Must enter a valid number of Bedrooms");
 
-            }
+            //}
 
-            return Result<Property>.Succes(new Property( title, address, size, price, propertyStatus, ownerId, numberOfBedrooms));
+            return Result<Property>.Succes(new Property(title));
         }
         public string ImagesUrlsSerialized
         {
