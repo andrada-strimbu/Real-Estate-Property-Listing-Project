@@ -2,12 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Infrastructure",
-    "\\Infrastructure\\Implementation",
     "\\Infrastructure\\Repositories",
-    "\\Real_estate.Application",
-    "\\Real_estate.Domain",
-    "\\Real_estate.Domain\\Entities"
+    "\\Real_estate.Domain"
   ],
-  "SelectedNode": "\\Real_Estate.sln",
+  "SelectedNode": "\\Real_estate.Application",
   "PreviewInSolutionExplorer": false
 }
