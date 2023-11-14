@@ -13,7 +13,7 @@ namespace Real_estate.Application.Features.Properties.Commands.CreateProperty
         public int Price { get; set; } = default!;
         public int NumberOfBedrooms { get; set; } = default!;
         public int NumberOfBathrooms { get; set; } = default!;
-        public List<string>? ImagesUrls { get; set; }
+        public List<string>? ImagesUrls { get; set; } = new List<string>();
         public Status PropertyStatus { get; set; }
         public Guid OwnerId { get; set; }
 

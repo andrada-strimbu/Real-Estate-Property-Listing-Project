@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Real_Estate_Property_Listing_Project.API.Controllers
 {
-    [Route("api/v1/[controller]")]
+    [Route("api/v2/[controller]")]
     [ApiController]
     public class ApiControllerBase : ControllerBase
     {

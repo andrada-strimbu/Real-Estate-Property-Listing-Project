@@ -32,7 +32,7 @@ namespace Real_estate.Domain.Entities
         public int Price { get; private set; } = default!;
         public int NumberOfBedrooms { get; private set; } = default!;
         public int NumberOfBathrooms { get; private set; } = default!;
-        public List<string>? ImagesUrls { get; private set; } 
+        public List<string>? ImagesUrls { get; private set; } = new List<string>();
 
         public Status PropertyStatus { get; private set; } 
         public Guid OwnerId { get; private set; } 

@@ -3,17 +3,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Real_estate.Application.Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Infrastructure
 {
     public static class InfrastructureRegistrationDI
     {
-        public static IServiceCollection AddInfrastrutureToDI(
+        public static IServiceCollection AddInfrastructureToDI(
             this IServiceCollection services,
             IConfiguration configuration)
         {

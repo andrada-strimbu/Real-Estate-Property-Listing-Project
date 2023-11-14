@@ -1,5 +1,7 @@
 using Infrastructure;
+using MediatR;
 using Real_estate.Application;
+using Real_estate.Application.Features.Properties.Commands.CreateProperty;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,9 @@ builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddMediatR(typeof(Program).Assembly);
+builder.Services.AddTransient<IRequestHandler<CreatePropertyCommand, CreatePropertyCommandResponse>, CreatePropertyCommandHandler>();
 
 
 var app = builder.Build();
