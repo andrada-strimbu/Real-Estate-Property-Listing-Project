@@ -5,42 +5,46 @@ namespace Real_estate.Domain.Entities
 {
     public class Listing : AuditableEntity
     {
-        private Listing(string title, User user, Proprety proprety, string description)
+        private Listing(string title, User user, Property property, string description)
         {
             ListingId = Guid.NewGuid();
             Title = title;
             User = user;
-            Proprety = proprety;
+            Property = property;
             Description = description;
         }
 
         public Guid ListingId { get; private set; }
         public string Title { get; private set; } = string.Empty;
         public User User { get; private set; }
-        public Proprety Proprety { get; private set; }
+        public Property Property { get; private set; }
         public string Description { get; private set; }
 
-
-        public static Result<Listing> Create(string title, User user, Proprety proprety, string description)
+        public static Result<Listing> Create(string title, User user, Property property, string description)
         {
-            userRole = user.UserRole.get();
+            if (user == null || property == null)
+            {
+                return Result<Listing>.Failure("User and Property are required.");
+            }
+
+            Role userRole = user.UserRole;
+
             if (string.IsNullOrWhiteSpace(title))
             {
                 return Result<Listing>.Failure("Title is required.");
             }
+
             if (string.IsNullOrWhiteSpace(description))
             {
                 return Result<Listing>.Failure("Description is required.");
             }
+
             if (userRole != Role.Owner)
             {
-                return Result<Listing>.Failure("Listing creator must be an Owner")
+                return Result<Listing>.Failure("Listing creator must be an Owner");
             }
-            return Result<Listing>.Succes(new Listing(title,user,proprety,description));
+
+            return Result<Listing>.success(new Listing(title, user, property, description));
         }
-
-
-        
-
     }
 }

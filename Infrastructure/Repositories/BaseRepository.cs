@@ -20,21 +20,21 @@ namespace Infrastructure.Repositories
             }
             await context.Set<T>().AddAsync(entity);
             await context.SaveChangesAsync();
-            return Result<T>.Succes(entity);
+            return Result<T>.success(entity);
         }
 
 
         public async Task<Result<T>> DeleteAsync(Guid id)
         {
             var result = await FindByIdAsync(id);
-            if (!result.IsSucces)
+            if (!result.Issuccess)
             {
                 return Result<T>.Failure($"Entity with id {id} not found ");
 
             }
             context.Set<T>().Remove(result.Value);
             await context.SaveChangesAsync();
-            return Result<T>.Succes(result.Value);
+            return Result<T>.success(result.Value);
 
         }
 
@@ -45,14 +45,14 @@ namespace Infrastructure.Repositories
             {
                 return Result<T>.Failure($"Entity with id {id} not found");
             }
-            return Result<T>.Succes(result);
+            return Result<T>.success(result);
         }
 
         public async Task<Result<IReadOnlyList<T>>> GetPagedReponseAsync(int page, int size)
         {
             var result = await context.Set<T>().Skip(page).Take(size).AsNoTracking().ToListAsync();
 
-            return Result<IReadOnlyList<T>>.Succes(result);
+            return Result<IReadOnlyList<T>>.success(result);
 
 
         }
@@ -66,7 +66,7 @@ namespace Infrastructure.Repositories
             }
             context.Entry(entity).State = EntityState.Modified;
             await context.SaveChangesAsync();
-            return Result<T>.Succes(entity);
+            return Result<T>.success(entity);
         }
     }
 }

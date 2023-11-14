@@ -39,7 +39,7 @@ namespace Real_estate.Domain.Entities
             {
                 return Result<User>.Failure("Must enter a valid status :  Customer / Owner / Admin ");
             }
-            return Result<User>.Succes(new User(name, email, password, userRole));
+            return Result<User>.success(new User(name, email, password, userRole));
         }
 
 
