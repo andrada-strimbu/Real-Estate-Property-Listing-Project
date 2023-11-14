@@ -1215,6 +1215,7 @@
       "Microsoft.EntityFrameworkCore >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.13",
+      "Npgsql >= 7.0.6",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.11",
       "Real_estate.Application >= 1.0.0",
       "Real_estate.Domain >= 1.0.0"
@@ -1281,6 +1282,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[7.0.13, )"
+          },
+          "Npgsql": {
+            "target": "Package",
+            "version": "[7.0.6, )"
           },
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",

@@ -28,9 +28,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{FF2C3009-C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Real_estate.Application", "Real_estate.Application\Real_estate.Application.csproj", "{210C2C32-1CBF-4262-9E05-5E41571D5721}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Testing", "Testing\Testing.csproj", "{17555FF4-3E5A-4916-ACD5-C369856C6114}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Real-Estate-Property-Listing-Project.API", "Real-Estate-Property-Listing-Project.API\Real-Estate-Property-Listing-Project.API.csproj", "{CE5D8B13-50ED-480F-BF31-63C9F86F3181}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Real-Estate-Property-Listing-Project.API", "Real-Estate-Property-Listing-Project.API\Real-Estate-Property-Listing-Project.API.csproj", "{CE5D8B13-50ED-480F-BF31-63C9F86F3181}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,10 +48,6 @@ Global
 		{210C2C32-1CBF-4262-9E05-5E41571D5721}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{210C2C32-1CBF-4262-9E05-5E41571D5721}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{210C2C32-1CBF-4262-9E05-5E41571D5721}.Release|Any CPU.Build.0 = Release|Any CPU
-		{17555FF4-3E5A-4916-ACD5-C369856C6114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{17555FF4-3E5A-4916-ACD5-C369856C6114}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{17555FF4-3E5A-4916-ACD5-C369856C6114}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{17555FF4-3E5A-4916-ACD5-C369856C6114}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CE5D8B13-50ED-480F-BF31-63C9F86F3181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CE5D8B13-50ED-480F-BF31-63C9F86F3181}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE5D8B13-50ED-480F-BF31-63C9F86F3181}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -72,7 +66,6 @@ Global
 		{3C2E9B71-58FB-4B75-BED6-4957D2D8CCE6} = {D4493D25-C35D-4955-BA19-6123364AE34F}
 		{D370C1CD-0826-48EB-ABC2-5BDE07693145} = {5AF75852-2642-4996-817B-E384B3742F7C}
 		{210C2C32-1CBF-4262-9E05-5E41571D5721} = {8AD51C42-C57D-4098-BC03-0C3E9E3E9B4C}
-		{17555FF4-3E5A-4916-ACD5-C369856C6114} = {FF2C3009-CB5C-42BB-8117-CACB0B89EA9C}
 		{CE5D8B13-50ED-480F-BF31-63C9F86F3181} = {372CA947-4C05-4F54-BCEA-BB38ABAFD311}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

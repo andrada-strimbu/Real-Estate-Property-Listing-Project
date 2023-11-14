@@ -1,4 +1,5 @@
 ﻿using Real_estate.Domain.Common;
+using System.Net.Sockets;
 using static Real_estate.Domain.Enums.Enums;
 
 namespace Real_estate.Domain.Entities
@@ -33,40 +34,40 @@ namespace Real_estate.Domain.Entities
         public int NumberOfBathrooms { get; private set; } = default!;
         public List<string>? ImagesUrls { get; private set; } 
 
-        public Status PropertyStatus { get; private set; } //
-        public Guid OwnerId { get; private set; } //
+        public Status PropertyStatus { get; private set; } 
+        public Guid OwnerId { get; private set; } 
 
-        public static Result<Property> Create(string title)
+        public static Result<Property> Create(string title, string address, int size, int price, Status propertyStatus, Guid ownerId, int numberOfBedrooms)
         {
             if (string.IsNullOrWhiteSpace(title))
             {
                 return Result<Property>.Failure("Property Name is required.");
             }
-            //if (string.IsNullOrWhiteSpace(address))
-            //{
-            //    return Result<Property>.Failure("Address is required.");
-            //}
-            //if (size <= 0)
-            //{
-            //    return Result<Property>.Failure("Size must be greater than 0");
-            //}
-            //if (price <= 0)
-            //{
-            //    return Result<Property>.Failure("Price must be greater than zero.");
-            //}
-            //if (propertyStatus != Status.ForSale && propertyStatus != Status.ForRent && propertyStatus != Status.SoldOrRented)
-            //{
-            //    return Result<Property>.Failure("Must enter a valid status :  ForSale / ForRent / SoldOrRented ");
-            //}
-            //if (ownerId == default)
-            //{
-            //    return Result<Property>.Failure("Owner Id should not be Guid.Empty(Default).");
-            //}
-            //if (numberOfBedrooms < 0)
-            //{
-            //    return Result<Property>.Failure("Must enter a valid number of Bedrooms");
+            if (string.IsNullOrWhiteSpace(address))
+            {
+                return Result<Property>.Failure("Address is required.");
+            }
+            if (size <= 0)
+            {
+                return Result<Property>.Failure("Size must be greater than 0");
+            }
+            if (price <= 0)
+            {
+                return Result<Property>.Failure("Price must be greater than zero.");
+            }
+            if (propertyStatus != Status.ForSale && propertyStatus != Status.ForRent && propertyStatus != Status.SoldOrRented)
+            {
+                return Result<Property>.Failure("Must enter a valid status :  ForSale / ForRent / SoldOrRented ");
+            }
+            if (ownerId == default)
+            {
+                return Result<Property>.Failure("Owner Id should not be Guid.Empty(Default).");
+            }
+            if (numberOfBedrooms < 0)
+            {
+                return Result<Property>.Failure("Must enter a valid number of Bedrooms");
 
-            //}
+            }
 
             return Result<Property>.Succes(new Property(title));
         }

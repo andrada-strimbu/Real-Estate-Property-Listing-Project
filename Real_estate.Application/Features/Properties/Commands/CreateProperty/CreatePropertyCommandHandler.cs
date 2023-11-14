@@ -28,7 +28,7 @@ namespace Real_estate.Application.Features.Properties.Commands.CreateProperty
                 };
             }
 
-            var property = Property.Create(request.PropertyTitle);
+            var property = Property.Create(request.Title, request.Address, request.Size, request.Price, request.PropertyStatus, request.OwnerId, request.NumberOfBedrooms);
             if (!property.IsSucces)
             {
                 return new CreatePropertyCommandResponse
@@ -47,7 +47,13 @@ namespace Real_estate.Application.Features.Properties.Commands.CreateProperty
                 Property = new CreatePropertyDto
                 {
                     PropertyId = property.Value.PropertyId,
-                    PropertyTitle = property.Value.Title
+                    Title = property.Value.Title,
+                    Address = property.Value.Address,
+                    Size = property.Value.Size,
+                    Price = property.Value.Price,
+                    PropertyStatus = property.Value.PropertyStatus,
+                    OwnerId = property.Value.OwnerId,
+                    NumberOfBedrooms = property.Value.NumberOfBedrooms
                 }
             };
         }

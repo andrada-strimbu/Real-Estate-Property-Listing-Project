@@ -45,3 +45,9 @@ C:\Users\andim\OneDrive\Documente\AN_3\Introducere .NET\Real-Estate-Property-Lis
 C:\Users\andim\OneDrive\Documente\AN_3\Introducere .NET\Real-Estate-Property-Listing-Project\Real-Estate-Property-Listing-Project.API\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\andim\OneDrive\Documente\AN_3\Introducere .NET\Real-Estate-Property-Listing-Project\Real-Estate-Property-Listing-Project.API\bin\Debug\net7.0\Infrastructure.dll
 C:\Users\andim\OneDrive\Documente\AN_3\Introducere .NET\Real-Estate-Property-Listing-Project\Real-Estate-Property-Listing-Project.API\bin\Debug\net7.0\Infrastructure.pdb
+C:\Users\andim\OneDrive\Documente\AN_3\Introducere .NET\Real-Estate-Property-Listing-Project\Real-Estate-Property-Listing-Project.API\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\andim\OneDrive\Documente\AN_3\Introducere .NET\Real-Estate-Property-Listing-Project\Real-Estate-Property-Listing-Project.API\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\andim\OneDrive\Documente\AN_3\Introducere .NET\Real-Estate-Property-Listing-Project\Real-Estate-Property-Listing-Project.API\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\andim\OneDrive\Documente\AN_3\Introducere .NET\Real-Estate-Property-Listing-Project\Real-Estate-Property-Listing-Project.API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\andim\OneDrive\Documente\AN_3\Introducere .NET\Real-Estate-Property-Listing-Project\Real-Estate-Property-Listing-Project.API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\andim\OneDrive\Documente\AN_3\Introducere .NET\Real-Estate-Property-Listing-Project\Real-Estate-Property-Listing-Project.API\obj\Debug\net7.0\Real-Estate-Property-Listing-Project.API.MvcApplicationPartsAssemblyInfo.cs
